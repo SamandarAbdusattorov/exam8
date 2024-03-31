@@ -76,9 +76,9 @@ class LatestScores(models.Model):
 
 class Standings(models.Model):
     team_id = models.ManyToManyField(Team, related_name="statistics")
-    mp = models.IntegerField()
-    w = models.IntegerField()
-    d = models.IntegerField()
-    l = models.IntegerField()
-    gd = models.IntegerField()
-    pts = models.IntegerField()
+    mp = models.IntegerField(default=0)
+    w = models.IntegerField(default=0)
+    d = models.IntegerField(default=0)
+    l = models.IntegerField(default=0)
+    gd = models.IntegerField(default=0)
+    pts = models.IntegerField(default=0)
